@@ -12,7 +12,6 @@ import HomeScreen from "./components/pages/HomeScreen";
 import DashboardScreen from "./components/pages/DashboardScreen";
 import RelicOne from "./components/pages/RelicOne";
 import RightSideDrawer from "./components/layout/RightSideDrawer";
-import LionRing from "./components/3d/LionRing";
 import Necklace from "./components/3d/Necklace";
 import Gem from "./components/3d/Gem";
 import LionGemsRing from "./components/3d/LionGems";
