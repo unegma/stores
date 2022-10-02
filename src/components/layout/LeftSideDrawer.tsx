@@ -36,12 +36,6 @@ export default function LeftSideDrawer(
         name: "Gem",
         infoTitle: "This is a Gem",
         infoText: "This is a description about a Gem",
-      },
-      {
-        key: 'lion-gems',
-        name: "Lion Gems",
-        infoTitle: "This is a Lion Ring with Gem eyes",
-        infoText: "This is a description about a Ring with Gems",
       }
     ]
   };

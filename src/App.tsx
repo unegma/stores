@@ -100,7 +100,7 @@ function App() {
           path="/lion-ring"
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <LionRing scale={0.4} xrScaleOffset={1} xrPositionOffset={[-5,-5,-5]} />}
+              <LionGemsRing scale={1.4} xrScaleOffset={1} xrPositionOffset={[0,-5,-5]} />}
             />
           }
         />
@@ -121,16 +121,6 @@ function App() {
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
               <Gem xrScaleOffset={15} xrPositionOffset={[1,1,1]} />}
-            />
-          }
-        />
-
-        <Route
-          key={'lion-gems'}
-          path="/lion-gems"
-          element={
-            <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <LionGemsRing xrScaleOffset={15} xrPositionOffset={[1,1,1]} />}
             />
           }
         />
