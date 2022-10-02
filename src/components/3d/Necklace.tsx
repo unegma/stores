@@ -44,7 +44,7 @@ export default function Necklace({  scale = 1, position = [0,0,0], xrScaleOffset
 
   return (
     <group ref={group} dispose={null} scale={localScale} position={localPosition}>
-      <group rotation={[-0.04, 0, 0]} scale={localScale}>
+      <group rotation={[-0.04, 0, 0]}>
         <mesh castShadow receiveShadow geometry={nodes.Object_5.geometry} material={materials['Material.001']}>
           <meshStandardMaterial color="silver" metalness={0.9} roughness={0.1} stencilWrite={true} shadowSide={THREE.DoubleSide} />
         </mesh>

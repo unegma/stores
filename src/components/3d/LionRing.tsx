@@ -42,7 +42,7 @@ export default function LionRing({ scale = 1, position = [0,0,0], xrScaleOffset 
 
   return (
     <group ref={group} dispose={null} scale={localScale} position={localPosition}>
-      <mesh castShadow receiveShadow geometry={nodes.lion_ring.geometry} scale={localScale}>
+      <mesh castShadow receiveShadow geometry={nodes.lion_ring.geometry}>
         <meshStandardMaterial color="goldenrod" metalness={0.9} roughness={0.1} stencilWrite={true} shadowSide={THREE.DoubleSide} />
       </mesh>
     </group>
