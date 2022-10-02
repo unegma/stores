@@ -16,7 +16,6 @@ import LionRing from "./components/3d/LionRing";
 import Necklace from "./components/3d/Necklace";
 import Gem from "./components/3d/Gem";
 import LionGemsRing from "./components/3d/LionGems";
-// import BookingModal from "./components/BookingModal";
 
 function App() {
   const [showImages, setShowImages] = useState(false);
@@ -101,8 +100,8 @@ function App() {
           path="/lion-ring"
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <LionRing scale={0.2} xrScaleOffset={10} />
-            }/>
+              <LionRing scale={0.2} xrScaleOffset={10} xrPositionOffset={[1,1,1]} />}
+            />
           }
         />
 
@@ -111,8 +110,8 @@ function App() {
           path="/necklace"
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <Necklace scale={1} xrScaleOffset={15} />
-            }/>
+              <Necklace xrScaleOffset={10} xrPositionOffset={[1,1,1]} /> }
+            />
           }
         />
 
@@ -121,8 +120,8 @@ function App() {
           path="/gem"
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <Gem scale={1} xrScaleOffset={15} />
-            }/>
+              <Gem xrScaleOffset={15} xrPositionOffset={[1,1,1]} />}
+            />
           }
         />
 
@@ -131,8 +130,8 @@ function App() {
           path="/lion-gems"
           element={
             <RelicOne rotationLock={false} cameraPosition={[-10,10,-10]} minDistance={5} maxDistance={10} relic={
-              <LionGemsRing scale={1} xrScaleOffset={15} />
-            }/>
+              <LionGemsRing xrScaleOffset={15} xrPositionOffset={[1,1,1]} />}
+            />
           }
         />
 

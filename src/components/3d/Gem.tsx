@@ -3,6 +3,7 @@ import React, {useEffect, useRef, useState} from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import {useXR} from "@react-three/xr";
+import {ItemProps} from "../../types/ItemProps";
 const ITEM_URI = `${process.env.REACT_APP_ASSETS_URL}/gem-transformed.glb`;
 
 type GLTFResult = GLTF & {
@@ -14,8 +15,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-
-export default function Gem({ scale, xrScaleOffset = 10, ...props }: any) {
+export default function Gem({ scale = 0.1, position = [0,0,0], xrScaleOffset = 10, xrPositionOffset = [1,1,1] }: ItemProps) {
   const group = useRef<THREE.Group>(null)
   const { nodes, materials } = useGLTF(ITEM_URI, 'https://www.gstatic.com/draco/versioned/decoders/1.4.1/') as GLTFResult
 
@@ -27,21 +27,21 @@ export default function Gem({ scale, xrScaleOffset = 10, ...props }: any) {
   } = useXR();
 
   const [localScale, setLocalScale] = useState(scale);
+  const [localPosition, setLocalPosition] = useState(position);
 
   useEffect(() => {
     console.log(`Is Presenting is: ${isPresenting}`);
     if (isPresenting) {
-      console.log(scale)
-      // console.log(`Scale Offset: ${xrScaleOffset}`)
-      setLocalScale(scale/xrScaleOffset);
-      // console.log(localScale)
+      setLocalScale(scale*xrScaleOffset);
+      setLocalPosition(xrPositionOffset);
     } else {
       setLocalScale(scale)
+      setLocalPosition(position)
     }
   }, [isPresenting]);
 
   return (
-    <group ref={group} {...props} dispose={null} scale={localScale}>
+    <group ref={group} dispose={null} scale={localScale} position={localPosition}>
       <mesh castShadow receiveShadow geometry={nodes.gem.geometry} material={materials.gem}>
         <meshStandardMaterial color="green" transparent={true} opacity={0.8} metalness={0.9} roughness={0} stencilWrite={true} shadowSide={THREE.DoubleSide} />
       </mesh>
