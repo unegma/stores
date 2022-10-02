@@ -15,7 +15,7 @@ type GLTFResult = GLTF & {
   }
 }
 
-export default function Gem({ scale = 0.1, position = [0,0,0], xrScaleOffset = 10, xrPositionOffset = [1,1,1] }: ItemProps) {
+export default function Gem({ scale = 1, position = [0,0,0], xrScaleOffset = 10, xrPositionOffset = [1,1,1] }: ItemProps) {
   const group = useRef<THREE.Group>(null)
   const { nodes, materials } = useGLTF(ITEM_URI, 'https://www.gstatic.com/draco/versioned/decoders/1.4.1/') as GLTFResult
 
