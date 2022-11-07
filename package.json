@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "pull-original": ". .env && git pull $ORIGINAL_GITHUB main --allow-unrelated-histories",
+    "pull-original": ". .env && git pull $ORIGINAL_GITHUB_SSH main --allow-unrelated-histories",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build-prod": "react-scripts build --prod",
