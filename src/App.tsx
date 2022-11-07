@@ -134,10 +134,6 @@ function App() {
         />
       </Routes>
 
-      <div className={`buttons-container buttons-container--left`}>
-        <Menu className="pointer" style={{ color: "black", margin: "0 4px" }} onClick={(event) => {toggleLeftSideDrawer(event)}}/>
-      </div>
-
       <div className="buttons-container">
         {/*<InfoOutlined className="pointer" style={{ color: "black", margin: "0 4px" }} onClick={() => {setShowInfoModal(!showInfoModal)}}/>*/}
 

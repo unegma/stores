@@ -67,6 +67,9 @@ export default function LeftSideDrawer(
 
           <Link to="/" className="drawer-link">
             <ListItem key={'nav'} disablePadding>
+              <div className={`hamburger-button`}>
+                <Menu className="pointer" style={{ color: "black", margin: "4px -4px 0 14px" }}/>
+              </div>
               <Typography className={`main-title main-title-navbar`} variant="h6" component="div" sx={{ flexGrow: 1 }}
                           onClick={(event:any) => {preToggleLeftSideDrawer(event)}}>
                 {process.env.REACT_APP_NAV_TITLE}
@@ -109,10 +112,6 @@ export default function LeftSideDrawer(
           {/*  </ListItemButton>*/}
           {/*</ListItem>*/}
         </List>
-
-        <div className={`buttons-container buttons-container--left`}>
-          <Menu className="pointer" style={{ color: "black", margin: "0 4px" }} onClick={(event) => {preToggleLeftSideDrawer(event)}}/>
-        </div>
 
       </Box>
     </Drawer>
