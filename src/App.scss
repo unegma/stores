@@ -1,7 +1,7 @@
 html, body {
   background: white;
   width: 100vw;
-  height: 100vh;
+  height: 100%; /* Using 100% because 100vh on mobiles will not include the navbar*/
 }
 
 #root {
@@ -72,7 +72,7 @@ canvas {
 .buttons-container {
   position: absolute;
   z-index: 999;
-  bottom: 60px; /* fix for mobiles */
+  bottom: 0px; /* fix for mobiles */
   right: 0;
   padding: 5px;
   display: flex;
@@ -87,7 +87,7 @@ canvas {
 
 .helperText {
   display: block;
-  margin: 2px 20px;
+  margin: 5px 5px;
   text-decoration: underline;
   cursor: pointer;
 }
